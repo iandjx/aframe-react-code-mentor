@@ -7,7 +7,12 @@ import { commits } from "./commits";
 
 function App() {
   return (
-    <Scene>
+    <Scene
+      embedded
+      vr-mode-ui={{ enabled: true }}
+      arjs={{ sourcetype: "webcam" }}
+      sourceWidth="1280"
+    >
       <Entity barchartstack={{ src: commits }} />
 
       <Entity primitive="a-camera" position="4 5 8.7" />
